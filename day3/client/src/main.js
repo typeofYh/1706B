@@ -1,12 +1,10 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router/index.js'
-import api from '@/api/index'
-
-Vue.use(api);
-
+import Vue from 'vue';
+import App from './App'
+import router from './router'
+import '@/config/element.config.js'
+import '@/assets/css/common.scss'
 new Vue({
     el:'#app',
-    render:(h)=>h(App),
-    router
+    router,
+    render:(h)=>h(App)
 })

@@ -3,7 +3,7 @@ const configList = [
         title:'学生',
         views:[
             {
-                name:'subimit',
+                name:'submit',
                 title:'提交成绩'
             },
             {

@@ -52,7 +52,6 @@ module.exports = class extends Controller{
     }
     async getuserinfo(){
         let token = this.ctx.get('token');
-        // console.log(this.ctx.request.headers.token);
         try{
             let userinfo = jwt.verify(token,this.app.config.keys);
             let title = await this.app.mysql.get('identity',{
@@ -61,6 +60,7 @@ module.exports = class extends Controller{
             userinfo.userIdentityTitle = title.title;
             //动态设置用户权限视图
             userinfo.viewList = findViews(title.title).views;
+            this.ctx.status = 200;
             this.ctx.body = userinfo;
         }catch(error){
             this.ctx.status = 401;

@@ -19,7 +19,6 @@
 
 <script>
 import {getUserInfo} from '@/api/info'
-import {findViewList} from '@/router/view.List'
 export default {
     data(){
         return {
@@ -33,8 +32,6 @@ export default {
             this.username = data.username;
             this.identityTitle = data.userIdentityTitle;
             this.viewsList = data.viewList;  //视图权限列表
-            findViewList(this.viewsList);
-            // this.$router.addRoutes()
         }).catch(error=>{
             console.log(error);
             window.localStorage.removeItem('token');

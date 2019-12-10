@@ -59,6 +59,20 @@
     "path": "/getuserinfo",
     "regexp": "/^\\/getuserinfo(?:\\/(?=$))?$/",
     "stack": [
+      "anonymous",
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/submitexam",
+    "regexp": "/^\\/submitexam(?:\\/(?=$))?$/",
+    "stack": [
+      "anonymous",
       "wrappedController"
     ]
   }

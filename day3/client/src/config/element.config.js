@@ -13,7 +13,8 @@ import {
     Aside,
     Main,
     Menu,
-    MenuItem
+    MenuItem,
+    DatePicker
 } from 'element-ui'
 
 
@@ -30,6 +31,8 @@ Vue.use(Aside);
 Vue.use(Main);
 Vue.use(Menu);
 Vue.use(MenuItem);
+Vue.use(DatePicker);
+
 
 
 

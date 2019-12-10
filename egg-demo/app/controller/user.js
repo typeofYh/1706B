@@ -51,24 +51,6 @@ module.exports = class extends Controller{
         }
     }
     async getuserinfo(){
-        let token = this.ctx.get('token');
-        try{
-            let userinfo = jwt.verify(token,this.app.config.keys);
-            let title = await this.app.mysql.get('identity',{
-                id:userinfo.identity
-            })
-            userinfo.userIdentityTitle = title.title;
-            //动态设置用户权限视图
-            userinfo.viewList = findViews(title.title).views;
-            this.ctx.status = 200;
-            this.ctx.body = userinfo;
-        }catch(error){
-            this.ctx.status = 401;
-            this.ctx.body = {
-                code:0,
-                msg:'用户登陆超时或用户信息错误，可能信息被篡改'
-            }
-        }
-        
+        this.ctx.body = this.ctx.userinfo;
     }
 }

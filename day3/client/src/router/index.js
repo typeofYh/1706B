@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-
+import {viewList} from './view.List'
 Vue.use(VueRouter);  //router-link  router-view
 
 const routes = new VueRouter({
@@ -29,7 +29,8 @@ const routes = new VueRouter({
                 {
                     path:'/index',
                     redirect:'/index/home'
-                }
+                },
+                ...viewList
             ]
         },
         {

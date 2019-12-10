@@ -1,5 +1,6 @@
 module.exports = app => {
     let {router,controller} = app;
+    let {getuserinfo} = app.middlewares;
     router.get('/',controller.index.init);
      /**
      * 注册
@@ -16,5 +17,9 @@ module.exports = app => {
      /**
      * 获取用户信息
      */
-    router.get('/getuserinfo',controller.user.getuserinfo)
+    router.get('/getuserinfo',getuserinfo(),controller.user.getuserinfo)
+    /**
+     *  提交成绩
+     */
+    router.post('/submitexam',getuserinfo(),controller.exam.submit)
 }

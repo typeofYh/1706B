@@ -1,5 +1,5 @@
-import router from './index'
-const viewList =  [
+
+export const viewList =  [
     {
         path:'/index/submit',
         meta:{
@@ -21,11 +21,10 @@ const viewList =  [
 ]
 
 
-export const findViewList = (arr)=>{  //
-    //arr 该用用户拥有的权限
-    router.addRoutes(viewList.filter(item=>{
-        let res = arr.find(val=>val.name === item.meta.name);
-        console.log(arr);
-        return res && item.meta.isAside;
-    }))
-}
+// export const findViewList = (arr)=>{  //
+//     //arr 该用用户拥有的权限
+//     router.addRoutes(viewList.filter(item=>{
+//         let res = arr.find(val=>val.name === item.meta.name);
+//         return res && item.meta.isAside;
+//     }))
+// }

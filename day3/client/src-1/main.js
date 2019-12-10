@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
-import router from './router/index.js'
-import api from '@/api/index'
+import router from './router/index.js.js'
+import api from '@/api'
 
 Vue.use(api);
 

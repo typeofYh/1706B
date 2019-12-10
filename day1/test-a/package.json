@@ -1,0 +1,17 @@
+{
+  "name": "testa",
+  "version": "1.0.2",
+  "description": "测试使用包",
+  "main": "a.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "createFile": "./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "commander": "^4.0.1"
+  }
+}

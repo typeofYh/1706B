@@ -13,3 +13,10 @@ export const submitExam = (data)=>request.post('/submitexam',data,{
         token:window.localStorage.getItem('token')
     }
 });
+
+
+export const searchExam = ()=>request.get('/searchexam',{
+    headers:{
+        token:window.localStorage.getItem('token')
+    }
+})

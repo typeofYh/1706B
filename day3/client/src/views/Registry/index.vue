@@ -74,7 +74,10 @@ export default {
                     sendUserInfo(this.userinfo).then(res=>{
                         // console.log(res);
                         if(res.data.code){
-                            alert(res.data.msg);
+                            this.$message({
+                                message:res.data.msg,
+                                type:'success'
+                            });
                             this.$router.push('/login');
                         }
                     })

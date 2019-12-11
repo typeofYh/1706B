@@ -46,7 +46,14 @@ export default {
                 textNum:this.textNum,
                 codeNum:this.codeNum
             }).then(res=>{
-                console.log(res);
+                if(res.data.code){
+                    this.$message({
+                        message:'提交成功',
+                        type:'success'
+                    });
+                    this.$router.push('/index/show')
+                }
+                
             })
         }
     }

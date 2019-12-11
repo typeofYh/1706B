@@ -9,6 +9,7 @@
             </el-form-item>
             <el-form-item>
                 <el-button @click="submit">登陆</el-button>
+                <router-link to="/registry">没有账号？点击注册</router-link>
             </el-form-item>
         </el-form>
     </el-container>
@@ -49,7 +50,7 @@ export default {
                             window.localStorage.setItem('token',res.data.data.token);
                             this.$router.push('/index');
                         }else{
-                            alert(res.data.msg);
+                            this.$message.error(res.data.msg);
                         }
                     })
                     return;

@@ -5,6 +5,7 @@
                 <img :src="require('@/assets/images/timg.jpg')" />
             </div>
             <el-menu class="menu">
+                <el-menu-item>首页</el-menu-item>
                 <el-menu-item v-for="(item,i) in viewsList" :key="i"><router-link :to="item.name">{{item.title}}</router-link></el-menu-item>
             </el-menu>
         </el-aside>
@@ -32,8 +33,7 @@ export default {
             this.username = data.username;
             this.identityTitle = data.userIdentityTitle;
             this.viewsList = data.viewList;  //视图权限列表
-        }).catch(error=>{
-            console.log(error);
+        }).catch(()=>{
             window.localStorage.removeItem('token');
             this.$router.replace('/login');
         })

@@ -14,7 +14,12 @@ import {
     Main,
     Menu,
     MenuItem,
-    DatePicker
+    DatePicker,
+    Message,
+    Table,
+    TableColumn,
+    Popover,
+    Tag
 } from 'element-ui'
 
 
@@ -32,6 +37,13 @@ Vue.use(Main);
 Vue.use(Menu);
 Vue.use(MenuItem);
 Vue.use(DatePicker);
+Vue.use(Table);
+Vue.use(TableColumn);
+Vue.use(Popover);
+Vue.use(Tag);
+
+
+Vue.prototype.$message = Message;
 
 
 

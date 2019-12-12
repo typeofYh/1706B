@@ -1,0 +1,29 @@
+[
+    {
+        "keys":[
+            "班长",
+            "大象",
+            "小眼睛",
+            "八维校长"
+        ],
+        "answer":"张传水"
+    },
+    {
+        "keys":[
+            "vue",
+            "数据双向绑定",
+            "created",
+            "vuex"
+        ],
+        "answer":"vue是一个MVVM的一个框架，是尤雨溪开发编写的，编写了指令，提供了数据驱动视图，只要管理数据，自动实现数据驱动视图"
+    },
+    {
+        "keys":[
+            "react",
+            "redux",
+            "mobx",
+            "react-router-dom"
+        ],
+        "answer":"react是facebook公司开源的一个框架，是mvc中的v，只关注视图层，优化了dom渲染机制，使用虚拟dom，使用diff算法优化dom节点渲染，社区非常成熟"
+    }
+]

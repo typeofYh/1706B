@@ -1,0 +1,36 @@
+.home{
+    display: flex;
+    flex-direction: column;
+}
+
+.home header,.home main,.home footer{
+    width: 100%;
+}
+.home main{
+    flex:1;
+    overflow: auto;
+}
+.home header{
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    background: #999;
+}
+.home footer{
+    display: flex;
+    height: 60px;
+    background: #999;
+}
+
+.home footer a{
+    flex:1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.home footer a.active{
+    color:red;
+}
+.home footer a i{
+    font-size: 30px;
+}

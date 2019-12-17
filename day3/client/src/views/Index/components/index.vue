@@ -9,6 +9,7 @@
 
 <script>
 import Echarts from 'echarts'
+import {getAg} from '@/api/info'
 let option = {
         title: {
             text: '成绩图示'
@@ -18,17 +19,18 @@ let option = {
             data:['技能平均成绩','理论平均成绩']
         },
         xAxis: {
-            data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+            splitNumber:5,
+            data: []
         },
         yAxis: {},
         series: [{
             name: '技能平均成绩',
             type: 'line',
-            data: [5, 20, 36, 10, 10, 20]
+            data: []
         },{
             name: '理论平均成绩',
             type: 'line',
-            data: [5, 20, 80, 10, 10, 20]
+            data: []
         }]
     };
 export default {
@@ -39,8 +41,16 @@ export default {
     },
     mounted(){
         this.linebox = Echarts.init(this.$refs.linebox);
+        getAg().then(({data})=>{
+            option.xAxis.data = data.data.map(item=>item.date);
+            option.series[0].data = data.data.map(item=>item.codeAg);
+            option.series[1].data = data.data.map(item=>item.textAg);
+            console.log(option);
+            this.linebox.setOption(option);
+        })
+       
         // console.log()
-        this.linebox.setOption(option);
+        
     }
 }
 </script>

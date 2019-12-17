@@ -28,4 +28,8 @@ module.exports = app => {
      * 2. 老师身份 返回所有的成绩
      */
     router.get('/searchexam',getuserinfo(),controller.exam.search);
+    /**
+     * 获取平均成绩
+     */
+    router.get('/getag',getuserinfo(),controller.exam.getag)
 }

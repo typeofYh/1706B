@@ -20,3 +20,10 @@ export const searchExam = ()=>request.get('/searchexam',{
         token:window.localStorage.getItem('token')
     }
 })
+
+
+export const getAg = ()=>request.get('/getag',{
+    headers:{
+        token:window.localStorage.getItem('token')
+    }
+});

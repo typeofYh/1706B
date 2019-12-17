@@ -53,4 +53,5 @@ module.exports = class extends Controller{
     async getuserinfo(){
         this.ctx.body = this.ctx.userinfo;
     }
+    
 }

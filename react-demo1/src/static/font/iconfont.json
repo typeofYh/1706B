@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "12314777",
+      "name": "系统管理",
+      "font_class": "xitongguanli",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "12314778",
+      "name": "导出",
+      "font_class": "daochu",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "12316642",
+      "name": "个人中心",
+      "font_class": "gerenzhongxin",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "12316644",
+      "name": "用户管理",
+      "font_class": "yonghuguanli",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    }
+  ]
+}

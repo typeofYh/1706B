@@ -1,0 +1,15 @@
+*{
+    padding:0;
+    margin: 0;
+    list-style: none;
+}
+
+body,html,#root,.wrapper{
+    width:100%;
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+    color:#000;
+}

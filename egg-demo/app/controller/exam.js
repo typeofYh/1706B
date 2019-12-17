@@ -53,4 +53,29 @@ module.exports = class extends Controller{
             data:[...data]
         }
     }
+    async getag(){
+        let data = await this.app.mysql.select('exam');
+        let date = Array.from(new Set(data.map(item=>new Date(item.date)*1)));
+        let res = date.map(item=>{
+            let textAg = 0;
+            let codeAg = 0;
+            let itemNum = data.filter(val=>new Date(val.date)*1 === item);
+            itemNum.forEach(item=>{
+                textAg += item.textNum;
+                codeAg += item.codeNum
+            });
+            textAg = (textAg / itemNum.length).toFixed(2);
+            codeAg = (codeAg / itemNum.length).toFixed(2);
+            return {
+                textAg,
+                codeAg,
+                date:new Date(item).toLocaleDateString()
+            }
+        })
+        this.ctx.body = {
+            code:1,
+            msg:'success',
+            data:res
+        }
+    }
 }
